@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section
+    class="page-header"
+    style="background-image: url('https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"
+  >
+    <div class="container text-center">
+      <h1 class="page-title animate-fade-up">
+        Lo que dicen <span class="gold-text">Nuestros Clientes</span>
+      </h1>
+      <p class="section-subtitle animate-fade-up-delay">Testimonios reales</p>
+    </div>
+  </section>
+
+  <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+    <p class="text-center">Testimonios aquí. (Página en construcción)</p>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    height: 40vh;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 70px;
+  }
+  .page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.7);
+  }
+  .page-header .container {
+    position: relative;
+    z-index: 2;
+  }
+  .page-title {
+    color: white;
+  }
+</style>

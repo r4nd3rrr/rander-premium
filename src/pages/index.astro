@@ -1,11 +1,535 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <!-- ===== HERO SLIDER ===== -->
+  <section class="hero-slider">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide slide-1">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h1 class="slide-title animate-fade-up">
+              <span data-es="Tecnología" data-en="Premium Technology"
+                >Tecnología</span
+              >
+              <span class="gold-text">
+                <span data-es="Premium" data-en="Premium">Premium</span>
+              </span>
+              <span data-es="para tu Hogar" data-en="for Your Home"
+                >para tu Hogar</span
+              >
+            </h1>
+            <p
+              class="slide-subtitle animate-fade-up-delay"
+              data-es="Soluciones técnicas residenciales de alta gama con garantía de calidad"
+              data-en="High-end residential technical solutions with quality guarantee"
+            >
+              Soluciones técnicas residenciales de alta gama con garantía de
+              calidad
+            </p>
+            <a href="/servicios" class="btn-primary animate-fade-in">
+              <span
+                data-es="Descubre Nuestros Servicios"
+                data-en="Discover Our Services"
+                >Descubre nuestros servicios</span
+              >
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide slide-2">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h1 class="slide-title">
+              <span data-es="Soporte Técnico" data-en="Technical Support"
+                >Soporte Técnico</span
+              >
+              <span class="gold-text">24/7</span>
+            </h1>
+            <p
+              class="slide-subtitle"
+              data-es="Emergencias, mantenimiento preventivo y soluciones inmediatas"
+              data-en="Emergencies, preventive maintenance and immediate solutions"
+            >
+              Emergencias, mantenimiento preventivo y soluciones inmediatas
+            </p>
+            <a href="/contacto" class="btn-primary">
+              <span data-es="Contacto Urgente" data-en="Emergency Contact"
+                >Contacto Urgente</span
+              >
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide slide-3">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h1 class="slide-title">
+              <span data-es="Expertos en" data-en="Experts in">Expertos en</span
+              >
+              <span class="gold-text">
+                <span data-es="Automatización" data-en="Automation"
+                  >Automatización</span
+                >
+              </span>
+            </h1>
+            <p
+              class="slide-subtitle"
+              data-es="Hogares inteligentes con la última tecnología"
+              data-en="Smart homes with the latest technology"
+            >
+              Hogares inteligentes con la última tecnología
+            </p>
+            <a href="/proyectos" class="btn-primary">
+              <span data-es="Ver Proyectos" data-en="View Projects"
+                >Ver Proyectos</span
+              >
+              <i class="fas fa-eye"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles del Slider -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS DESTACADOS ===== -->
+  <section class="featured-services">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span data-es="Servicios" data-en="Services">Servicios</span>
+          <span class="gold-text">
+            <span data-es="Premium" data-en="Premium">Premium</span>
+          </span>
+        </h2>
+        <p
+          class="section-subtitle"
+          data-es="Soluciones técnicas especializadas para clientes exigentes"
+          data-en="Specialized technical solutions for demanding clients"
+        >
+          Soluciones técnicas especializadas para clientes exigentes
+        </p>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <i class="fas fa-home-lg-alt"></i>
+          </div>
+          <h3
+            data-es="Mantenimiento Residencial"
+            data-en="Residential Maintenance"
+          >
+            Mantenimiento Residencial
+          </h3>
+          <p
+            data-es="Sistemas eléctricos, fontanería, climatización y seguridad del hogar."
+            data-en="Electrical systems, plumbing, climate control and home security."
+          >
+            Sistemas eléctricos, fontanería, climatización y seguridad del
+            hogar.
+          </p>
+          <a href="/servicios#mantenimiento" class="service-link">
+            <span data-es="Más detalles" data-en="More details"
+              >Más detalles</span
+            >
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 data-es="Automatización Premium" data-en="Premium Automation">
+            Automatización Premium
+          </h3>
+          <p
+            data-es="Domótica integral, control inteligente y sistemas de entretenimiento."
+            data-en="Complete home automation, smart control and entertainment systems."
+          >
+            Domótica integral, control inteligente y sistemas de
+            entretenimiento.
+          </p>
+          <a href="/servicios#automatizacion" class="service-link">
+            <span data-es="Más detalles" data-en="More details"
+              >Más detalles</span
+            >
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 data-es="Seguridad Avanzada" data-en="Advanced Security">
+            Seguridad Avanzada
+          </h3>
+          <p
+            data-es="Sistemas de vigilancia, alarmas y controles de acceso de última generación."
+            data-en="Surveillance systems, alarms and state-of-the-art access controls."
+          >
+            Sistemas de vigilancia, alarmas y controles de acceso de última
+            generación.
+          </p>
+          <a href="/servicios#seguridad" class="service-link">
+            <span data-es="Más detalles" data-en="More details"
+              >Más detalles</span
+            >
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 data-es="Energía Inteligente" data-en="Smart Energy">
+            Energía Inteligente
+          </h3>
+          <p
+            data-es="Optimización energética, paneles solares y soluciones sostenibles."
+            data-en="Energy optimization, solar panels and sustainable solutions."
+          >
+            Optimización energética, paneles solares y soluciones sostenibles.
+          </p>
+          <a href="/servicios#energia" class="service-link">
+            <span data-es="Más detalles" data-en="More details"
+              >Más detalles</span
+            >
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center animate-on-scroll">
+        <a href="/servicios" class="btn-secondary">
+          <span data-es="Ver Todos los Servicios" data-en="View All Services"
+            >Ver Todos los Servicios</span
+          >
+          <i class="fas fa-list"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POR QUÉ ELEGIRNOS ===== -->
+  <section class="why-choose-us">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span data-es="¿Por qué" data-en="Why">¿Por qué</span>
+          <span class="gold-text">
+            <span data-es="Rander Premium" data-en="Rander Premium"
+              >Rander Premium</span
+            >
+          </span>
+          <span data-es="?" data-en="?">?</span>
+        </h2>
+        <p
+          class="section-subtitle"
+          data-es="La excelencia técnica como estándar"
+          data-en="Technical excellence as standard"
+        >
+          La excelencia técnica como estándar
+        </p>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item animate-on-scroll">
+          <div class="feature-number gold-text">01</div>
+          <h3 data-es="Técnicos Certificados" data-en="Certified Technicians">
+            Técnicos certificados
+          </h3>
+          <p
+            data-es="Profesionales con certificaciones internacionales y formación continua."
+            data-en="Professionals with international certifications and continuous training."
+          >
+            Profesionales con certificaciones internacionales y formación
+            continua.
+          </p>
+        </div>
+
+        <div class="feature-item animate-on-scroll">
+          <div class="feature-number gold-text">02</div>
+          <h3 data-es="Garantía Extendida" data-en="Extended Warranty">
+            Garantía Extendida
+          </h3>
+          <p
+            data-es="Hasta 3 años de garantía en instalaciones y reparaciones premium."
+            data-en="Up to 3 years warranty on premium installations and repairs."
+          >
+            Hasta 3 años de garantía en instalaciones y reparaciones premium.
+          </p>
+        </div>
+
+        <div class="feature-item animate-on-scroll">
+          <div class="feature-number gold-text">03</div>
+          <h3 data-es="Respuesta Inmediata" data-en="Immediate Response">
+            Respuesta Inmediata
+          </h3>
+          <p
+            data-es="Servicio de emergencias 24/7 con tiempo de respuesta garantizado."
+            data-en="24/7 emergency service with guaranteed response time."
+          >
+            Servicio de emergencias 24/7 con tiempo de respuesta garantizado.
+          </p>
+        </div>
+
+        <div class="feature-item animate-on-scroll">
+          <div class="feature-number gold-text">04</div>
+          <h3
+            data-es="Tecnología de Vanguardia"
+            data-en="Cutting-edge Technology"
+          >
+            Tecnología de Vanguardia
+          </h3>
+          <p
+            data-es="Equipos y ferramentas de última generación para resultados óptimos."
+            data-en="State-of-the-art equipment and tools for optimal results."
+          >
+            Equipos y herramientas de última generación para resultados óptimos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS RECIENTES ===== -->
+  <section class="recent-projects">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span data-es="Proyectos" data-en="Projects">Proyectos</span>
+          <span class="gold-text">
+            <span data-es="Destacados" data-en="Featured">Destacados</span>
+          </span>
+        </h2>
+        <p
+          class="section-subtitle"
+          data-es="Trabajos recientes que demuestran nuestra excelencia"
+          data-en="Recent work demonstrating our excellence"
+        >
+          Trabajos recientes que demuestran nuestra excelencia
+        </p>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Proyecto 1 -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Casa Inteligente"
+            />
+            <div class="project-overlay">
+              <a href="/proyectos#casa-inteligente" class="project-view">
+                <span data-es="Ver Proyecto" data-en="View Project"
+                  >Ver Proyecto</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3
+              data-es="Casa Inteligente Residencial"
+              data-en="Smart Residential House"
+            >
+              Casa Inteligente Residencial
+            </h3>
+            <p
+              data-es="Automatización completa en residencia de lujo"
+              data-en="Complete automation in luxury residence"
+            >
+              Automatización completa en residencia de lujo
+            </p>
+            <div class="project-tags">
+              <span class="tag" data-es="Domótica" data-en="Home Automation"
+                >Domótica</span
+              >
+              <span class="tag" data-es="Seguridad" data-en="Security"
+                >Seguridad</span
+              >
+              <span
+                class="tag"
+                data-es="Climatización"
+                data-en="Climate Control">Climatización</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Sistema de Seguridad"
+            />
+            <div class="project-overlay">
+              <a href="/proyectos#seguridad-avanzada" class="project-view">
+                <span data-es="Ver Proyecto" data-en="View Project"
+                  >Ver Proyecto</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3
+              data-es="Sistema de Seguridad Avanzado"
+              data-en="Advanced Security System"
+            >
+              Sistema de Seguridad Avanzado
+            </h3>
+            <p
+              data-es="Vigilancia 360° con IA y control remoto"
+              data-en="360° surveillance with AI and remote control"
+            >
+              Vigilancia 360° con IA y control remoto
+            </p>
+            <div class="project-tags">
+              <span class="tag" data-es="Cámaras" data-en="Cameras"
+                >Cámaras</span
+              >
+              <span class="tag" data-es="IA" data-en="AI">IA</span>
+              <span
+                class="tag"
+                data-es="Control Remoto"
+                data-en="Remote Control">Control Remoto</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Optimización Energética"
+            />
+            <div class="project-overlay">
+              <a href="/proyectos#energia-solar" class="project-view">
+                <span data-es="Ver Proyecto" data-en="View Project"
+                  >Ver Proyecto</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3
+              data-es="Sistema Solar Residencial"
+              data-en="Residential Solar System"
+            >
+              Sistema Solar Residencial
+            </h3>
+            <p
+              data-es="Instalación completa con monitoreo inteligente"
+              data-en="Complete installation with smart monitoring"
+            >
+              Instalación completa con monitoreo inteligente
+            </p>
+            <div class="project-tags">
+              <span class="tag" data-es="Energía Solar" data-en="Solar Energy"
+                >Energía Solar</span
+              >
+              <span
+                class="tag"
+                data-es="Sostenibilidad"
+                data-en="Sustainability">Sostenibilidad</span
+              >
+              <span class="tag" data-es="Ahorro" data-en="Savings">Ahorro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center animate-on-scroll">
+        <a href="/proyectos" class="btn-secondary">
+          <span
+            data-es="Explorar Portafolio Completo"
+            data-en="Explore Full Portfolio">Explorar Portafolio Completo</span
+          >
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LLAMADA A LA ACCIÓN ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2
+          data-es="¿Listo para Transformar tu Hogar?"
+          data-en="Ready to Transform Your Home?"
+        >
+          ¿Listo para Transformar tu Hogar?
+        </h2>
+        <p
+          data-es="Contacta a nuestros expertos para una consulta gratuita y personalizada"
+          data-en="Contact our experts for a free and personalized consultation"
+        >
+          Contacta a nuestros expertos para una consulta gratuita y
+          personalizada
+        </p>
+        <div class="cta-buttons">
+          <a href="/contacto" class="btn-primary">
+            <i class="fas fa-calendar-alt"></i>
+            <span data-es="Agendar Consulta" data-en="Schedule Consultation"
+              >Agendar Consulta</span
+            >
+          </a>
+          <a href="tel:+1234567890" class="btn-secondary">
+            <i class="fas fa-phone"></i>
+            <span data-es="Llamar Ahora" data-en="Call Now">Llamar Ahora</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts locales para inicialización swiper si es necesario -->
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof Swiper !== "undefined") {
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 0,
+          centeredSlides: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      }
+    });
+  </script>
 </Layout>
